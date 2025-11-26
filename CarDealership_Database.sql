@@ -7,7 +7,7 @@ USE CarDealership;
 -- );
 
 -- CREATE TABLE Vehicles (
--- Vin BIGINT NOT NULL ,
+-- Vin BIGINT NOT NULL primary key,
 -- Vehicle_Year INT NOT NULL,
 -- Make CHAR (50),
 -- Model CHAR (50),
@@ -16,11 +16,12 @@ USE CarDealership;
 -- Price DOUBLE
 -- );
 
-CREATE TABLE Inventory (
-Dealership_id INT auto_increment primary key,
-Vin BIGINT NOT NULL,
-primary key (
-);
+-- CREATE TABLE Inventory (
+-- Dealership_id INT auto_increment primary key,
+-- Vin BIGINT NOT NULL,
+-- FOREIGN KEY(Dealership_id) REFERENCES dealerships(Dealership_id),
+-- FOREIGN KEY (Vin) REFERENCES vehicles(Vin)
+-- );
 
 -- CREATE TABLE Sales_Contracts(
 -- Contract_Type VARCHAR(50) ,
@@ -29,4 +30,4 @@ primary key (
 -- Processing_Fee DOUBLE ,
 -- Finance DOUBLE
 
-);
+-- );
